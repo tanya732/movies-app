@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import {MovieContext} from '../context/MovieContext'
 
 const Watchlist = () => {
-  const [watchlist, setWatchlist] = useState([])
+  const {watchlist, setWatchlist} = useContext(MovieContext)
   const [search, setSearch] = useState('')
   const [currentGenre, setCurrentGenre] = useState("All")
   const [genreList, setGenreList] = useState(["All"])
