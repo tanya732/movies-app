@@ -13,8 +13,8 @@ const Banner = () => {
         ).then((response) => {
             // Update the bannerImage and title
             console.log(response)
-            setBannerImage(`https://image.tmdb.org/t/p/original${response.data.results[1].backdrop_path}`)
-            setTitle(response.data.results[1].title)
+            setBannerImage(`https://image.tmdb.org/t/p/original${response.data.results[0].backdrop_path}`)
+            setTitle(response.data.results[0].title)
         }).catch((error) => {
             console.error('Error fetching movie data: ', error)
         })  
